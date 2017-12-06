@@ -1,0 +1,24 @@
+{
+	"description" : "Become an Agent of S.H.I.E.L.D. with this animated wallpaper!",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.06274509803921569 0.0784313725490196 0.09411764705882353"
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"monetization" : false,
+	"preview" : "preview.png",
+	"tags" : [ "Sci-Fi" ],
+	"title" : "S.H.I.E.L.D. Interface",
+	"type" : "web",
+	"visibility" : "public"
+}

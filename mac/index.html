@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+S.H.I.E.L.D. UI
+by Shane B. (/u/Nova_496)
+=========================
+
+Feel free to modify the assets and/or code to your personal liking.
+Do not re-distribute these files without permission from myself.
+
+This variant of the 'wallpaper' is tailored for macOS desktops with a dock at the bottom of the screen.
+
+ -->
+
+
+
+<head>
+<!-- ====== AUDIO VISUALIZER ====== -->
+
+<script src="libs/jquery-3.1.1.min.js"></script>
+<script src="libs/createjs-2015.11.26.min.js"></script>
+<script src="script.js"></script>
+
+
+<!-- ====== DATE/TIME ====== -->
+<script type="text/javascript">
+var tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+var tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate();
+var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+
+document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+" - "+nhour+":"+nmin+ap+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+    
+<!-- ====== S.H.I.E.L.D. UI START ====== -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>S.H.I.E.L.D. Desktop v2</title>
+<style type="text/css">
+body {
+	background-image: url(assets/bg.png);
+	background-repeat: repeat;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #000;
+}
+.contentborder {
+	border-style: solid;
+	border-width: 308px 216px 311px 208px;
+	-moz-border-image: url(assets/border.png) 308 216 311 208 repeat;
+	-webkit-border-image: url(assets/border.png) 308 216 311 208 repeat;
+	-o-border-image: url(assets/border.png) 308 216 311 208 repeat;
+	border-image: url(assets/border.png) 308 216 311 208 fill repeat;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	left: 281px;
+	bottom: 60px;
+	overflow: hidden;
+	z-index: 1;
+}
+.sidebar {
+	display: flex;
+	width:281px;
+	float:left;
+	z-index:1;
+}
+.badge {
+	background-image: url(assets/badge.png);
+	width:281px;
+	height:91px;
+}
+.bar {
+	/* [disabled]height: 100%; */
+	border-style: solid;
+	border-width: 34px 8px 33px 19px;
+	-moz-border-image: url(assets/sideborder.png) 34 8 33 19 repeat;
+	-webkit-border-image: url(assets/sideborder.png) 34 8 33 19 repeat;
+	-o-border-image: url(assets/sideborder.png) 34 8 33 19 repeat;
+	border-image: url(assets/sideborder.png) 34 8 33 19 fill repeat;
+	position: absolute;
+	width: 256px;
+	left: 0px;
+	bottom: 61px;
+	top: 91px;
+	overflow: hidden;
+}
+.content {
+	z-index: 2;
+	position: absolute;
+	right: 44px;
+	top: 38px;
+	left: 315px;
+	bottom: 66px;
+	overflow: hidden;
+	background: url(assets/animated.png) no-repeat center center;
+}
+#canvas {
+	position: absolute;
+	left: 485px;
+	bottom: 92px;
+}
+
+#clockbox {
+	color: #FFF;
+	position: absolute;
+	right: 216px;
+	bottom: 93px;
+	text-align: right;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+}
+</style>
+</head>
+<body> 
+<div class="sidebar">
+<div class="badge"></div>
+<div class="bar">
+<img src="assets/side_list1.png" width="256" height="42" />
+<img src="assets/side_list2.png" width="256" height="42" />
+<img src="assets/side_list3.png" width="256" height="42" />
+<img src="assets/side_list4.png" width="256" height="42" />
+<img src="assets/side_list5.png" width="256" height="42" />
+<img src="assets/side_list6.png" width="256" height="42" />
+<img src="assets/side_list7.png" width="256" height="42" />
+<img src="assets/side_list8.png" width="256" height="42" />
+<img src="assets/side_list9.png" width="256" height="42" />
+<img src="assets/side_list10.png" width="256" height="42" />
+<img src="assets/side_list11.png" width="256" height="42" />
+<img src="assets/side_list12.png" width="256" height="42" />
+<img src="assets/side_list13.png" width="256" height="42" />
+<img src="assets/side_list14.png" width="256" height="42" />
+<img src="assets/side_list15.png" width="256" height="42" />
+<img src="assets/side_list16.png" width="256" height="42" />
+<img src="assets/side_list17.png" width="256" height="42" />
+<img src="assets/side_list18.png" width="256" height="42" />
+<img src="assets/side_list19.png" width="256" height="42" />
+<img src="assets/side_list20.png" width="256" height="42" />
+<img src="assets/side_list21.png" width="256" height="42" />
+<img src="assets/side_list22.png" width="256" height="42" />
+<img src="assets/side_list1.png" width="256" height="42" />
+<img src="assets/side_list2.png" width="256" height="42" />
+<img src="assets/side_list3.png" width="256" height="42" />
+<img src="assets/side_list4.png" width="256" height="42" />
+<img src="assets/side_list5.png" width="256" height="42" />
+<img src="assets/side_list6.png" width="256" height="42" />
+<img src="assets/side_list7.png" width="256" height="42" />
+<img src="assets/side_list8.png" width="256" height="42" />
+<img src="assets/side_list9.png" width="256" height="42" />
+<img src="assets/side_list10.png" width="256" height="42" />
+<img src="assets/side_list11.png" width="256" height="42" />
+<img src="assets/side_list12.png" width="256" height="42" />
+<img src="assets/side_list13.png" width="256" height="42" />
+<img src="assets/side_list14.png" width="256" height="42" />
+<img src="assets/side_list15.png" width="256" height="42" />
+<img src="assets/side_list16.png" width="256" height="42" />
+<img src="assets/side_list17.png" width="256" height="42" />
+<img src="assets/side_list18.png" width="256" height="42" />
+<img src="assets/side_list19.png" width="256" height="42" />
+<img src="assets/side_list20.png" width="256" height="42" />
+<img src="assets/side_list21.png" width="256" height="42" />
+<img src="assets/side_list22.png" width="256" height="42" /></div>
+</div>
+
+<div class="contentborder"></div>
+<div class="content"></div>
+
+<canvas id="canvas"></canvas>
+<div id="clockbox"></div>
+</body>
+</html>
